@@ -62,14 +62,20 @@ const [current, setCurrent] = useState('Welcome');
         </span>
         <span className='md:text-3xl flex gap-5 text-base items-center '>
           <a href="https://github.com/kcblaq?tab=overview" target='_blank'>
-          <FaGithub className="cursor-pointer  transform transition-transform duration-300 hover:scale-125"  />
+          <span className="cursor-pointer  transform transition-transform duration-300 hover:scale-125" >
+          <FaGithub  />
+          </span>
           </a>
           <a href="mailto:ugwujameskelechi@gmail.com" target='_blank'>
-          <TfiEmail className="cursor-pointer transform transition-transform duration-300 hover:scale-125" />
+          <span className="cursor-pointer transform transition-transform duration-300 hover:scale-125" >
+          <TfiEmail />
+          </span>
           </a>
           <a href='https://drive.google.com/file/d/1TV_U607OCLPeX8RXdFof6hxlUZL-ZYjb/view?usp=sharing' download>
 
-          <VscFilePdf className="cursor-pointer transform transition-transform duration-300 hover:scale-125" />
+          <span  className="cursor-pointer transform transition-transform duration-300 hover:scale-125">
+          <VscFilePdf  />
+          </span>
           </a>
         </span>
       </div>
