@@ -26,6 +26,8 @@ import Welcome from "@/components/Welcome";
 import GlobalReformation from "@/components/projects/GlobalReformation";
 import Kejepay from "@/components/projects/Kejepay";
 import Shortchase from "@/components/projects/Shortchase";
+import Zummit from "@/components/projects/Zummit";
+import Haloasset from "@/components/projects/Haloasset";
 
 
 export default function Home() {
@@ -34,7 +36,9 @@ const [current, setCurrent] = useState('Welcome');
   // const bgImage = 'https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg';
   // const image2 = 'https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   
-  const projects = [{name:'Shortchase', link: 'https://shortchaseclient.netlify.app/'}, {name:'Kejepay', link:'https://kele.netlify.app/'}, 
+  const projects = [{name:'Shortchase', link: 'https://shortchaseclient.netlify.app/'}, 
+  // {name:'Kejepay', link:'https://kele.netlify.app/'} , 
+  {name:'Zummit', link:'https://zummitafrica.com/'}, {name:'Hallo', link:'https://www.haloasset.com/'}, 
   // 'Oobla', 
   // 'PX Pharma', 
   {name:'GlobalReformation', link: 'https://globalreformationnetwork.org/'}]
@@ -87,6 +91,8 @@ const [current, setCurrent] = useState('Welcome');
           : current == 'Shortchase' ? <Shortchase url='https://shortchaseclient.netlify.app/'/>
           : current =='Kejepay'? <Kejepay url='https://kejepay.com.ng/' />
           : current == 'GlobalReformation'? <GlobalReformation url='https://globalreformationnetwork.org/'/>
+          : current == 'Zummit'? <Zummit url='https://zummitafrica.com/'/>
+          : current == 'Hallo'? <Haloasset url='https://www.haloasset.com/'/>
           : null
         }
         </div>
