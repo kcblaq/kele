@@ -48,7 +48,7 @@ const [current, setCurrent] = useState('Welcome');
 
   return (
     <section
-    className={`relative flex w-full bg-bg  h-screen flex-col no-scrollbar scrollbar-none text-[#C5C6C7] no-scrollbar`}
+    className={`relative flex w-full bg-bg h-full md:h-screen flex-col no-scrollbar scrollbar-none text-[#C5C6C7] no-scrollbar`}
     
     >
       <Head>
@@ -97,7 +97,8 @@ const [current, setCurrent] = useState('Welcome');
         }
         </div>
         <div className={`flex flex-col w-full md:w-1/3 h-full items-start md:p-8 p-3 text-text`}>
-        <h1 className=' font-bold text-3xl flex items-center gap-2'> Projects<IoCheckbox/> </h1>
+        {/* <h1 className=' font-bold text-3xl flex items-center gap-2'> Projects<IoCheckbox/> </h1> */}
+        <h1 className=' font-bold text-3xl flex items-center gap-2'> Projects: </h1>
         <div className="flex flex-wrap gap-2">
         {
           projects.map((project) => <p className={`${current === project.name && 'text-[#66FCF1] border-[#66FCF1]' } border transform transition-transform duration-300 hover:scale-110 font-bold cursor-pointer text-center mt-4 p-2 py-1 shadow-lg rounded-3xl  hover:text-[#66FCF1] hover:border-[#66FCF1]`} onClick={()=> setCurrent(project.name)}>{project.name} </p> )
