@@ -14,6 +14,8 @@ import { PiFigmaLogoLight } from "react-icons/pi";
 import { SiPostgresql } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+import { IoMenuSharp } from "react-icons/io5";
+
 
 import Head from 'next/head'
 
@@ -82,6 +84,12 @@ const [current, setCurrent] = useState('Welcome');
           </span>
           </a>
         </span>
+        {/* <span className='md:text-6xl text-3xl  cursor-pointer transform transition-transform duration-300 hover:scale-125 '
+        onClick={()=> window.location.reload()}
+        >
+        
+        <IoMenuSharp />
+        </span> */}
       </div>
 
       <div className="flex flex-col md:flex-row  w-full justify-between items-center">
@@ -98,7 +106,7 @@ const [current, setCurrent] = useState('Welcome');
         </div>
         <div className={`flex flex-col w-full md:w-1/3 h-full items-start md:p-8 p-3 text-text`}>
         {/* <h1 className=' font-bold text-3xl flex items-center gap-2'> Projects<IoCheckbox/> </h1> */}
-        <h1 className=' font-bold text-3xl flex items-center gap-2'> Projects: </h1>
+        <h1 className=' font-bold text-3xl flex items-center pt-8 md:pt-0 gap-2'> Projects: </h1>
         <div className="flex flex-wrap gap-2">
         {
           projects.map((project) => <p className={`${current === project.name && 'text-[#66FCF1] border-[#66FCF1]' } border transform transition-transform duration-300 hover:scale-110 font-bold cursor-pointer text-center mt-4 p-2 py-1 shadow-lg rounded-3xl  hover:text-[#66FCF1] hover:border-[#66FCF1]`} onClick={()=> setCurrent(project.name)}>{project.name} </p> )

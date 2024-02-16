@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Welcome() {
   return (
     <div className={`flex flex-col gap-4 h-full  w-full p-3 md:p-8 text-text`}>
@@ -15,12 +17,16 @@ export default function Welcome() {
             <br />
             Explore my portfolio for creative and functional projects. */}
 
-Passionate Fullstack Software Engineer with expertise in JavaScript, React.js, React Native, Express.js, and TypeScript. 🚀 Specializing in the art of crafting dynamic web and mobile applications, I seamlessly blend sleek React.js UIs with robust Express.js backends. 💡
-
-I've led the creation of a cutting-edge microblogging betting system designed for insightful predictions and contributed to the world of e-commerce, ensuring seamless online shopping experiences. 🔧 My commitment to code reliability is reflected in the use of TypeScript, guaranteeing innovation and efficiency in every project.
-
-Join me in the journey of innovation! Explore my portfolio to witness a collection of creative and functional projects that showcase my dedication to excellence in software engineering. Let's bring your ideas to life! 🌟
+ A passionate Fullstack Software Engineer dedicated to crafting innovative and efficient solutions. With a solid foundation in both frontend and backend technologies, I bring a holistic approach to software development. My journey began with a curiosity for problem-solving, and it has evolved into a commitment to creating seamless, user-centric applications.
           </p>
+          
+          </div>
+          <div className="pl-6 md:pt-12">
+          {/* <button className='border p-2 transform transition-transform duration-300 hover:scale-110' > Contact me
+          </button> */}
+          <div className="transform transition-transform duration-300 hover:shadow-lg">
+          <Link href={`https://calendly.com/ugwujameskelechi/30min`} className="border p-3 text-lg font-semibold transform transition-all hover:text-[#66FCF1] duration-300 hover:scale-110 hover:shadow hover:font-extrabold hover:shadow-white"> Book a meeting with me</Link>
+          </div>
           </div>
         </div>
   )

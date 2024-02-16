@@ -8,6 +8,7 @@ export default function Haloasset({url}: Prop) {
   const description = <p>
 Halo Asset is a fintech platform where verified users can save, invest and borrow money.
 Users can;
+<div className='hidden md:grid'>
 
   <li>  Create account and get verified </li>
   <li>  Send and recieve money on their wallets</li>
@@ -15,6 +16,7 @@ Users can;
   <li>  Invest into various stocks</li> 
   <li>  Withdraw into an account </li> 
   etc.
+</div>
 
     </p>
   return (

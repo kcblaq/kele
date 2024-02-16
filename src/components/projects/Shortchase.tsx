@@ -9,11 +9,14 @@ export default function Shortchase({url}: Prop) {
 Shortchase is a social micro-bloging peer-to-peer betting platform for making any kind of custom wager.
 Users can;
 {/* <ul> */}
+<div className='hidden md:grid'>
+
   <li>  Make wagers and invite others to bet for or against </li>
   <li>  Create a giveaway for other users</li>
   <li> Sell their own betting signals</li>
   <li>  See results of their wager, and be rewarded for it, which is withdrawable.</li> 
   etc.
+</div>
 {/* </ul> */}
     </p>
   return (
