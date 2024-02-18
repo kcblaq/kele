@@ -71,7 +71,7 @@ export default function Home() {
 
   return (
     <section
-      className={`relative  flex w-full bg-bg h-screen flex-col no-scrollbar scrollbar-none text-[#C5C6C7] no-scrollbar`}
+      className={`relative min-h-screen  flex w-full bg-bg h-screen flex-col no-scrollbar scrollbar-none text-[#C5C6C7] no-scrollbar`}
     >
       <Head>
         <title> Kelechi </title>
