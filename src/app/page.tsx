@@ -35,6 +35,7 @@ import Shortchase from "@/components/projects/Shortchase";
 import Zummit from "@/components/projects/Zummit";
 import Haloasset from "@/components/projects/Haloasset";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 
 export default function Home() {
@@ -63,6 +64,10 @@ export default function Home() {
     };
   }, [showMenu]);
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
 
   return (
     <section
@@ -79,7 +84,9 @@ export default function Home() {
       {/* The mobile menu */}
       {
         showMenu &&
-        <div className="h-screen w-[80%] max-w-[250px] absolute right-0  bg-zinc-900 transition-all duration-200 grid z-10 ">
+        <motion.div initial="hidden"
+        animate="visible"
+        variants={containerVariants}  className="h-screen w-[80%] max-w-[250px] absolute right-0  bg-zinc-900 transition-all duration-200 grid z-10 ">
           <span className=' flex relative  flex-col text-lg '>
             <span className=" absolute text-white cursor-pointer transition-all duration-300 hover:scale-125 hover:text-[#66FCF1] right-4 top-6 " onClick={(e) => {
               e.preventDefault()
@@ -109,24 +116,8 @@ export default function Home() {
               <p> Download my CV </p>
 
             </Link>
-            {/* <a href="https://github.com/kcblaq?tab=overview" target='_blank'>
-              <span className="cursor-pointer  transform transition-transform duration-300 hover:scale-125" >
-                <FaGithub />
-              </span>
-            </a>
-            <a href="mailto:ugwujameskelechi@gmail.com" target='_blank'>
-              <span className="cursor-pointer transform transition-transform duration-300 hover:scale-125" >
-                <TfiEmail />
-              </span>
-            </a>
-            <a href='https://drive.google.com/file/d/1TV_U607OCLPeX8RXdFof6hxlUZL-ZYjb/view?usp=sharing' download>
-
-              <span className="cursor-pointer transform transition-transform duration-300 hover:scale-125">
-                <VscFilePdf />
-              </span>
-            </a> */}
           </span>
-        </div>
+        </motion.div>
       }
       <div className="flex  w-full justify-between items-center p-3 md:p-8">
 
